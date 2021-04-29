@@ -30,4 +30,9 @@ public class InitListener implements ServletContextListener {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public void contextDestroyed(ServletContextEvent servletContextEvent) {
+
+    }
 }
