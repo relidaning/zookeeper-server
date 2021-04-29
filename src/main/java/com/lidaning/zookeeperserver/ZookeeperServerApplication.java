@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @ServletComponentScan
+//@EnableDiscoveryClient
 @SpringBootApplication
 public class ZookeeperServerApplication {
 
