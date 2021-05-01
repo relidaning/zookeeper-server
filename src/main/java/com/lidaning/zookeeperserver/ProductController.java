@@ -22,14 +22,6 @@ public class ProductController {
     @Autowired
     DiscoveryClient discoveryClient;
 
-    @RequestMapping("/getProduct")
-    public Map getProduct(@RequestBody Map entity){
-        Map map = new HashMap();
-        map.put("id",entity.get("id"));
-        map.put("name","你好");
-        return map;
-    }
-
     @RequestMapping("/getInstance")
     public String getInstance(){
         //获取实例化的注册节点
