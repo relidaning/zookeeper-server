@@ -1,4 +1,4 @@
-package com.lidaning.zookeeperserver;
+package com.lidaning.zookeeperserver.zookeeper.lock;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.curator.framework.CuratorFramework;
@@ -27,13 +27,14 @@ public class CuratorFrameworkController {
         InterProcessMutex process = new InterProcessMutex(zk, "/zklock/zknode");
         CountDownLatch latch = new CountDownLatch(1);
         try{
-            for(int i=0;i<10;i++){
+            for(int i=0;i<100;i++){
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         try {
                             latch.await();
                             process.acquire();
+                            Thread.sleep(100);
                             log.info("current order num : "+orderNum);
                             orderNum++;
                             process.release();

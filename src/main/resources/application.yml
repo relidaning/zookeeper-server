@@ -9,3 +9,5 @@ spring:
     name: zookeeper-server
 
 
+logging:
+  config: classpath:logback-spring.xml

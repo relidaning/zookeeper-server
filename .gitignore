@@ -29,3 +29,5 @@ HELP.md
 mvnw
 mvnw.cmd
 *.iml
+*.log
+logs/
